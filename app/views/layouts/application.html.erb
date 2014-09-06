@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app='demo'>
+<head>
+  <title>DemoAngular</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-controller='HomeCtrl'>
+<input type="text" ng-model="test.text">
+<br>
+{{test.text}}
+
+<h1 ng-click="submitButton()">submit</h1>
+
+    <div ui-view></div>
+    <!-- We'll also add some navigation: -->
+    <a ui-sref="state1">State 1</a>
+    <a ui-sref="state2">State 2</a>
+
+
+</body>
+</html>
